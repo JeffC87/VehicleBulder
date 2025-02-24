@@ -28,7 +28,7 @@ This is a command line application.  The first choices given are to create a new
 This application is covered under the [ISC License (ISC)](https://opensource.org/licenses/ISC)
 
 ## Link to demonstration video:
-https://drive.google.com/file/d/1Wc0pOE4dr2MKzwLsPf2KYBxBfHRWkHdO/view?usp=sharing
+https://drive.google.com/file/d/14SCqfodacM9bugwCPhFB08jan3GXbw55/view?usp=drive_link
 
 ## Questions
 
