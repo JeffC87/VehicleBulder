@@ -7,7 +7,6 @@ import AbleToTow from '../interfaces/AbleToTow.js';
 
 
 
-// TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
 class Truck extends Vehicle implements AbleToTow {
   vin: string;
   color: string;
@@ -28,9 +27,10 @@ class Truck extends Vehicle implements AbleToTow {
     year: number,
     weight: number,
     topSpeed: number,
-  wheels: Wheel[],
-  towingCapacity: number
-  ) {
+    wheels: Wheel[],
+    towingCapacity: number
+  ) 
+  {
     super();
     this.vin = vin;
     this.color = color;
@@ -48,18 +48,16 @@ class Truck extends Vehicle implements AbleToTow {
     }
   }
 
-  // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
-    // TODO: Get the make an model of the vehicle if it exists
-    // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    // TODO: If it is, log that the vehicle is being towed
-    // TODO: If it is not, log that the vehicle is too heavy to be towed
-  }
+    if(vehicle.weight <= this.towingCapacity) {
+      console.log(`Truck ${this.make} ${this.model} is towing a ${vehicle.make} ${vehicle.model}.`)
+      }
+    else {
+      console.log(`The ${vehicle.make} ${vehicle.model} is too heavy to be towed.`);
+      }
+    }
 
-  // TODO: Override the printDetails method from the Vehicle class
-    // TODO: The method should call the printDetails method of the parent class
-    // TODO: The method should log the details of the Truck
-    // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
+  override printDetails(): void {
     console.log(`VIN: ${this.vin}`);
     console.log(`Color: ${this.color}`);
     console.log(`Make: ${this.make}`);
@@ -81,7 +79,8 @@ class Truck extends Vehicle implements AbleToTow {
     );
     console.log(
       `Wheel 4: ${this.wheels[3].getDiameter} inch with a ${this.wheels[3].getTireBrand} tire`
+    );
+  }
 }
-
 // Export the Truck class as the default export
 export default Truck;
